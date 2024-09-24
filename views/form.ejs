@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%= title %></title>
+	</head>
+	<body>
+		<h1><%= title %></h1>
+		<form action="/new" method="post">
+			<div>
+				<label for="newFact">
+					Add a new fact
+					<input type="text" id="newFact" name="newFact" required />
+				</label>
+			</div>
+			<div>
+				<label for="username">
+					Your username
+					<input type="text" id="username" name="username" required />
+				</label>
+			</div>
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+		<a href="/">View all facts</a>
+	</body>
+</html>
