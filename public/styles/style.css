@@ -64,6 +64,7 @@ li {
 	background-color: white;
 	transition: transform 200ms ease-in 100ms;
 	max-width: 350px;
+	margin: 0 auto;
 	min-height: 400px;
 	display: flex;
 	flex-direction: column;
