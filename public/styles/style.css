@@ -108,3 +108,31 @@ button:hover {
 	color: black;
 	border: none;
 }
+
+form {
+	background-color: white;
+	border-radius: 10px;
+	max-width: 400px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+form div {
+	padding: 10px;
+}
+
+input {
+	width: 100%;
+	padding: 5px;
+}
+
+form button {
+	width: 100%;
+}
+
+form button:hover {
+	background-color: rgba(202, 197, 223, 255);
+	color: black;
+}
