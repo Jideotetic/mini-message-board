@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const indexRouter = require("./routes/indexRoute");
-const newFactRouter = require("./routes/newFactRoute");
+const newFactRouter = require("./routes/factsRoute");
 
 const app = express();
 
