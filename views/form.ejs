@@ -3,28 +3,33 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- <link rel="stylesheet" href="../style.css" /> -->
+		<link rel="stylesheet" href="../style.css" />
 		<title><%= title %></title>
 	</head>
 	<body>
-		<%- include("components/heading", {title: title}) %>
-		<form action="/new" method="post">
-			<div>
-				<label for="newFact">
-					Add a new fact
-					<input type="text" id="newFact" name="newFact" required />
-				</label>
-			</div>
-			<div>
-				<label for="username">
-					Your username
-					<input type="text" id="username" name="username" required />
-				</label>
-			</div>
-			<div>
-				<button type="submit">Submit</button>
-			</div>
-		</form>
-		<a href="/">View all facts</a>
+		<header>
+			<%- include("components/heading", {title: title}) %>
+			<a href="/">View all facts</a>
+		</header>
+
+		<main>
+			<form action="/new" method="post">
+				<div>
+					<label for="newFact">
+						Add a new fact
+						<input type="text" id="newFact" name="newFact" required />
+					</label>
+				</div>
+				<div>
+					<label for="username">
+						Your username
+						<input type="text" id="username" name="username" required />
+					</label>
+				</div>
+				<div>
+					<button type="submit">Submit</button>
+				</div>
+			</form>
+		</main>
 	</body>
 </html>
