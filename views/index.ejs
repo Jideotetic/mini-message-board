@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%= title %></title>
+	</head>
+	<body>
+		<ul>
+			<% randomFacts.forEach((fact) => { %>
+			<li>
+				<p><%= fact.text %></p>
+				<div><span>User:</span> <small><%= fact.user %></small></div>
+				<div>
+					<span>Date Created:</span>
+					<small
+						><time datetime="<%= fact.added %>"><%= fact.added %></time></small
+					>
+				</div>
+			</li>
+			<%})%>
+		</ul>
+		<a href="new">Add new fact</a>
+	</body>
+</html>
