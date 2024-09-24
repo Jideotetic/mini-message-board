@@ -3,6 +3,7 @@ const factsController = require("../controllers/factsController");
 
 const router = express.Router();
 
-router.get("/", factsController.getRandomFacts);
+router.get("/new", factsController.createNewFact);
+router.post("/new", factsController.addNewFact);
 
 module.exports = router;

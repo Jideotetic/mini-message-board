@@ -6,11 +6,12 @@
 		<title><%= title %></title>
 	</head>
 	<body>
+		<h1><%= title %></h1>
 		<ul>
 			<% randomFacts.forEach((fact) => { %>
 			<li>
 				<p><%= fact.text %></p>
-				<div><span>User:</span> <small><%= fact.user %></small></div>
+				<div><span>Added by:</span> <small><%= fact.user %></small></div>
 				<div>
 					<span>Date Created:</span>
 					<small
@@ -20,6 +21,6 @@
 			</li>
 			<%})%>
 		</ul>
-		<a href="new">Add new fact</a>
+		<a href="/new">Add new fact</a>
 	</body>
 </html>

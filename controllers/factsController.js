@@ -20,4 +20,17 @@ const getRandomFacts = (req, res) => {
 	res.render("index", { title: "Random Cool Facts", randomFacts: randomFacts });
 };
 
-module.exports = { getRandomFacts };
+const createNewFact = (req, res) => {
+	res.render("form", { title: "Random Cool Facts" });
+};
+
+const addNewFact = (req, res) => {
+	randomFacts.push({
+		text: req.body.newFact,
+		user: req.body.username,
+		added: new Date(),
+	});
+	res.redirect("/");
+};
+
+module.exports = { getRandomFacts, addNewFact, createNewFact };
