@@ -43,8 +43,7 @@ ul {
 	justify-content: center;
 }
 
-li,
-.fact-details {
+li {
 	overflow-wrap: break-word;
 	word-break: break-word;
 	border-radius: 20px;
@@ -53,6 +52,19 @@ li,
 	width: 350px;
 	min-height: 400px;
 	flex-basis: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.fact-details {
+	overflow-wrap: break-word;
+	word-break: break-word;
+	border-radius: 20px;
+	background-color: white;
+	transition: transform 200ms ease-in 100ms;
+	max-width: 350px;
+	min-height: 400px;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
