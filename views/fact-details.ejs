@@ -3,23 +3,33 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../style.css" />
+		<link rel="stylesheet" href="../styles/style.css" />
 		<title><%= title %></title>
 	</head>
 	<body>
 		<header>
-			<%- include("components/heading", {title: title}) %>
+			<%- include("components/heading", {title: title, open:false}) %>
 			<a href="/new">Add new fact</a>
 			<a href="/">View all facts</a>
 		</header>
 		<main>
-			<p><%= fact.text %></p>
-			<div><span>Added by:</span> <small><%= fact.user %></small></div>
-			<div>
-				<span>Date Created:</span>
-				<small
-					><time datetime="<%= fact.added %>"><%= fact.added %></time></small
-				>
+			<div class="fact-details">
+				<div class="card-background">
+					<img src="<%= fact.image %>" alt="Background image" />
+				</div>
+				<div class="card-content">
+					<p><%= fact.text %></p>
+					<div>
+						<div>
+							<small><%= fact.user %></small>
+							<small
+								><time datetime="<%= fact.added %>"
+									><%= fact.added %></time
+								></small
+							>
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
 	</body>

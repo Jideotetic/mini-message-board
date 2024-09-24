@@ -1,0 +1,21 @@
+<li>
+	<div class="card-background">
+		<img src="<%= fact.image %>" alt="Background image" />
+	</div>
+	<div class="card-content">
+		<p><%= fact.text %></p>
+		<div>
+			<div>
+				<small><%= fact.user %></small>
+				<small
+					><time datetime="<%= fact.added %>"><%= fact.added %></time></small
+				>
+			</div>
+			<% if(open)
+			<button type="button" onclick="window.location.href='<%= fact.id %>'">
+				Open
+			</button>
+			%>
+		</div>
+	</div>
+</li>

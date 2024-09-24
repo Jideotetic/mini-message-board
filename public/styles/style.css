@@ -43,7 +43,8 @@ ul {
 	justify-content: center;
 }
 
-li {
+li,
+.fact-details {
 	overflow-wrap: break-word;
 	word-break: break-word;
 	border-radius: 20px;
@@ -57,7 +58,8 @@ li {
 	gap: 10px;
 }
 
-li:hover {
+li:hover,
+.fact-details:hover {
 	background-color: antiquewhite;
 	transform: scale(1.1);
 }
@@ -99,4 +101,10 @@ button {
 	background-color: black;
 	color: white;
 	border-radius: 5px;
+}
+
+button:hover {
+	background-color: white;
+	color: black;
+	border: none;
 }
