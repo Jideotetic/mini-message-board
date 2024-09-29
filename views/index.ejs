@@ -17,16 +17,20 @@
 				<% randomFacts.forEach((fact) => { %>
 				<li>
 					<div class="card-background">
-						<img src="<%= fact.image %>" alt="Background image" height="200" />
+						<img
+							src="<%= fact.image_url  %>"
+							alt="Background image"
+							height="200"
+						/>
 					</div>
 					<div class="card-content">
-						<p><%= fact.text %></p>
+						<p><%= fact.fact %></p>
 						<div>
 							<div>
-								<small><%= fact.user %></small>
+								<small><%= fact.username %></small>
 								<small
 									><time datetime="<%= fact.added %>"
-										><%= fact.added %></time
+										><%= fact.formatted_date %></time
 									></small
 								>
 							</div>
