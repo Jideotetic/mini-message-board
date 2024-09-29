@@ -15,7 +15,7 @@ const backgroundImages = [
 
 const getRandomImage = () => {
 	const imageURL =
-		process.argv[3] ||
+		process.argv[3] + backgroundImages[Math.floor(Math.random() * 7)] ||
 		process.env.IMAGE_URL + backgroundImages[Math.floor(Math.random() * 7)];
 	return imageURL;
 };
