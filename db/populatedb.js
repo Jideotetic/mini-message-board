@@ -32,9 +32,9 @@ async function main() {
 	console.log("seeding...");
 	const client = new Client({
 		connectionString: process.argv[2] || process.env.DB_URL,
-		// ssl: {
-		// 	rejectUnauthorized: false,
-		// },
+		ssl: {
+			rejectUnauthorized: false,
+		},
 	});
 
 	await client.connect();
