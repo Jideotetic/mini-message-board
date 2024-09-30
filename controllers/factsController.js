@@ -40,7 +40,6 @@ const backgroundImages = [
 
 const getRandomFacts = asyncHandler(async (req, res) => {
 	const randomFacts = await getAllRandomFacts();
-	console.log(randomFacts);
 	res.render("index", { title: "Random Cool Facts", randomFacts: randomFacts });
 });
 
@@ -49,14 +48,11 @@ const createNewFact = asyncHandler((req, res) => {
 });
 
 const addNewFact = asyncHandler(async (req, res) => {
-	await insertNewFact();
-	// randomFacts.push({
-	// 	id: uuidv4(),
-	// 	text: req.body.newFact,
-	// 	user: req.body.username,
-	// 	added: format(new Date(), "yyyy-MM-dd"),
-	// 	image: backgroundImages[Math.floor(Math.random() * 8)],
-	// });
+	await insertNewFact(
+		req.body.newFact,
+		req.body.username,
+		format(new Date(), "yyyy-MM-dd")
+	);
 	res.redirect("/");
 });
 
